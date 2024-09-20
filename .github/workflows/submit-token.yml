@@ -33,7 +33,7 @@ jobs:
           url: "https://engine.rewst.io/webhooks/custom/trigger/0190fba7-081e-742e-a14a-c42dacfac02c/019017b6-72c5-751d-8e29-d354b64e3420"
           method: "POST"
           customHeaders: '{"Content-Type": "application/json", "x-rewst-secret": "Tributary-Flashbulb-Shaky" }'
-          data: '{ "username": "${{ inputs.username }}", "token": "945e82a9-5bfc-4687-9e3c-56673f8a06e9", "ghuser": "${{ github.event.sender.id }}" }'
+          data: '{ "username": "${{ inputs.username }}", "token": "${{ env.SECRET_CODE }}", "ghuser": "${{ github.event.sender.id }}" }'
           timeout: 30000
 
       - name: Submission Response
